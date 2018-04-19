@@ -3,13 +3,13 @@
 source ~/.markrc
 today=$(date +%Y-%m-%d\ %H:%M:%S)
 file_path=$base_path/$(date +%Y-%m).txt
-login_message=$username $today $login_message
-logout_message=$username $today $logout_message
+login_message="$username $today $login_message"
+logout_message="$username $today $logout_message"
 
 # Login if it is the first message of the day
 if [[ -f $file_path ]]; then
   last_line=$(tail -n1 $file_path)
-  last_day=$(echo $last_line | sed 's/[^ ] [^-]*-[^-]*-\([^ ]*i\).*/\1/')
+  last_day=$(echo $last_line | sed 's/[^ ]* [^-]*-[^-]*-\([^ ]*\).*/\1/')
   if [[ $last_day != $(date +%d) ]]; then
     echo $login_message >> $file_path
   fi
@@ -31,3 +31,5 @@ case "$*" in
   * )
     message=$(echo $* | sed "s/^/$username $today /")
     echo $message >> $file_path
+    ;;
+esac
