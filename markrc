@@ -1,4 +1,0 @@
-base_path="$HOME/mark"
-username=$(whoami)
-login_message="I am in"
-logout_message="I am out"
