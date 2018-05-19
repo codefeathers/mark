@@ -1,0 +1,12 @@
+#!/usr/bin/node
+
+const mark = require('../index');
+const { argv } = require('process');
+
+const input = {
+	process: argv[0],
+	cwd: argv[1],
+	args: argv.slice(2)
+};
+
+mark(input);

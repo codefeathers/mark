@@ -1,0 +1,31 @@
+{
+	"name": "@codefeathers/mark",
+	"version": "0.0.1",
+	"description": "Mark your work progress",
+	"main": "bin/mark",
+	"scripts": {
+		"test": "jasmine"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/codefeathers/mark.git"
+	},
+	"keywords": [
+		"time-tracker",
+		"worksheet",
+		"productivity",
+		"bash",
+		"mark"
+	],
+	"author": "Muthu Kumar <@MKRhere> (https://mkr.pw)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/codefeathers/mark/issues"
+	},
+	"homepage": "https://github.com/codefeathers/mark#readme",
+	"dependencies": {
+		"@codefeathers/cmd-js": "^0.2.0",
+		"@codefeathers/fuse": "^0.11.0",
+		"readline-promise": "^1.0.3"
+	}
+}
